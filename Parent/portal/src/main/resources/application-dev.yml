@@ -1,2 +1,12 @@
 server:
   port: 8090
+
+
+spring:
+  application:
+    name: Portal
+  cloud:
+    nacos:
+      discovery:
+        namespace: f01d0c8f-fb24-46dd-b320-0c38a86bce8a
+        server-addr: 124.223.29.31:8848

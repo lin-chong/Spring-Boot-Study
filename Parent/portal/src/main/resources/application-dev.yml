@@ -8,5 +8,21 @@ spring:
   cloud:
     nacos:
       discovery:
-        namespace: f01d0c8f-fb24-46dd-b320-0c38a86bce8a
+#        namespace: f01d0c8f-fb24-46dd-b320-0c38a86bce8a
         server-addr: 124.223.29.31:8848
+  datasource:
+    username: root
+    password: root
+    url:  jdbc:mysql://127.0.0.1:3306/web-study?serverTimezone=GMT%2b8&useUnicode=true&characterEncoding=utf8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # Hikari will use the above plus the following to setup connection pooling
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      pool-name: HikariCPPool
+      minimum-idle: 10
+      maximum-pool-size: 20
+      connection-init-sql: SET NAMES utf8mb4
+      connection-test-query: SELECT 1
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+

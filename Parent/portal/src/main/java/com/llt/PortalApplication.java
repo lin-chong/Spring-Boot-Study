@@ -20,6 +20,7 @@ import java.util.Map;
 public class PortalApplication {
     public static void main(String[] args) {
         ConfigurableApplicationContext run = new SpringApplication(PortalApplication.class).run(args);
+//        run.addApplicationListener();
         ConfigurableEnvironment environment = run.getEnvironment();
         String[] activeProfiles = environment.getActiveProfiles();
         Map<String, Object> systemEnvironment = environment.getSystemEnvironment();
